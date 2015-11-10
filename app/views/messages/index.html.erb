@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1>New Messages</h1>
+<%= render 'form' %>
+
+<h1>Listing Messages</h1>
+<% @messages.each do |message| %>
+    <hr>
+    <dl>
+      <dt>title:</dt><dd><%= message.title %></dd>
+      <dt>date:</dt><dd><%= message.created_at %></dd>
+      <dt>message:</dt><dd><%= message.body %></dd>
+      <dt>user:</dt><dd><%= message.signature %></dd>
+    </dl>
+    <% end %>
+
